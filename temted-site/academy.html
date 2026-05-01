@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TemTed Academy — Practical learning for builders & teams</title>
+  <meta name="description" content="TemTed Academy delivers hands-on courses, cohort programs, and corporate training in software, product, data, and leadership." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" />
+  <link rel="stylesheet" href="./src/styles/app.css" />
+</head>
+<body data-page="academy">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div data-partial="announce"></div>
+  <div data-partial="header"></div>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="section section--tight academy-hero">
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="./index.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Academy</span>
+        </nav>
+
+        <div class="academy-hero__grid">
+          <div>
+            <span class="eyebrow">TemTed Academy</span>
+            <h1 class="academy-hero__title">Practical learning for the people who build.</h1>
+            <p class="academy-hero__lede">
+              Live cohorts, on-demand courses, and bespoke corporate programs in software, product, data and leadership — taught by practitioners who ship.
+            </p>
+            <div class="academy-hero__ctas">
+              <a href="#catalog" class="btn btn--primary btn--lg">Browse courses →</a>
+              <a href="./contact.html" class="btn btn--secondary btn--lg">Train your team</a>
+            </div>
+            <ul class="academy-hero__stats">
+              <li><strong>4,200+</strong><span>learners</span></li>
+              <li><strong>38</strong><span>active courses</span></li>
+              <li><strong>92%</strong><span>completion rate</span></li>
+            </ul>
+          </div>
+
+          <aside class="academy-hero__panel" aria-label="Featured cohort">
+            <span class="pill pill--live"><span class="pill-dot"></span>Open enrolment</span>
+            <h3>Cohort 06 · Modern Backend with Node & Postgres</h3>
+            <p>8 weeks · live sessions · final project review with senior engineers.</p>
+            <ul class="cohort-meta">
+              <li><span>Starts</span><strong>15 May 2026</strong></li>
+              <li><span>Format</span><strong>Live + recorded</strong></li>
+              <li><span>Seats left</span><strong>14 of 40</strong></li>
+            </ul>
+            <a href="#catalog" class="btn btn--primary">Enrol</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pillars -->
+    <section class="section">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow">Tracks</span>
+          <h2>Four learning tracks. One outcome — confident builders.</h2>
+        </header>
+
+        <div class="pillars-grid">
+          <article class="pillar">
+            <div class="pillar__icon">⌨️</div>
+            <h3>Engineering</h3>
+            <p>Backend, frontend, mobile, DevOps and the fundamentals that hold them together.</p>
+            <a href="#catalog" class="link-arrow">Explore engineering →</a>
+          </article>
+          <article class="pillar">
+            <div class="pillar__icon">📐</div>
+            <h3>Product & Design</h3>
+            <p>Discovery, UX, product management, and design systems for shipping teams.</p>
+            <a href="#catalog" class="link-arrow">Explore product →</a>
+          </article>
+          <article class="pillar">
+            <div class="pillar__icon">📊</div>
+            <h3>Data & AI</h3>
+            <p>Analytics, ML foundations, data engineering, and applied AI for real workflows.</p>
+            <a href="#catalog" class="link-arrow">Explore data →</a>
+          </article>
+          <article class="pillar">
+            <div class="pillar__icon">🧭</div>
+            <h3>Leadership</h3>
+            <p>Tech leadership, engineering management, and how to grow people who build.</p>
+            <a href="#catalog" class="link-arrow">Explore leadership →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catalog -->
+    <section class="section section--alt" id="catalog">
+      <div class="container">
+        <header class="section-head section-head--row">
+          <div>
+            <span class="eyebrow">Catalog</span>
+            <h2>Featured courses</h2>
+          </div>
+          <div class="filter-row" role="tablist" aria-label="Filter courses">
+            <button class="chip chip--active" data-filter="all">All</button>
+            <button class="chip" data-filter="engineering">Engineering</button>
+            <button class="chip" data-filter="product">Product</button>
+            <button class="chip" data-filter="data">Data & AI</button>
+            <button class="chip" data-filter="leadership">Leadership</button>
+          </div>
+        </header>
+
+        <div class="course-grid">
+          <article class="course-card" data-track="engineering">
+            <div class="course-card__head">
+              <span class="pill pill--category">Engineering</span>
+              <span class="course-card__level">Intermediate</span>
+            </div>
+            <h3>Modern Backend with Node & Postgres</h3>
+            <p>Build production-ready APIs with auth, jobs, observability, and clean migrations.</p>
+            <footer class="course-card__foot">
+              <span>8 weeks · cohort</span>
+              <a href="#" class="link-arrow">View →</a>
+            </footer>
+          </article>
+
+          <article class="course-card" data-track="engineering">
+            <div class="course-card__head">
+              <span class="pill pill--category">Engineering</span>
+              <span class="course-card__level">Beginner</span>
+            </div>
+            <h3>Web Foundations: HTML, CSS & JS</h3>
+            <p>Become genuinely fluent with the platform — semantic HTML, modern CSS, vanilla JS.</p>
+            <footer class="course-card__foot">
+              <span>6 weeks · self-paced</span>
+              <a href="#" class="link-arrow">View →</a>
+            </footer>
+          </article>
+
+          <article class="course-card" data-track="product">
+            <div class="course-card__head">
+              <span class="pill pill--category">Product</span>
+              <span class="course-card__level">Intermediate</span>
+            </div>
+            <h3>Product Discovery in Practice</h3>
+            <p>Hypothesis-driven discovery with continuous interviews, prototypes, and bets.</p>
+            <footer class="course-card__foot">
+              <span>5 weeks · cohort</span>
+              <a href="#" class="link-arrow">View →</a>
+            </footer>
+          </article>
+
+          <article class="course-card" data-track="data">
+            <div class="course-card__head">
+              <span class="pill pill--category">Data & AI</span>
+              <span class="course-card__level">Intermediate</span>
+            </div>
+            <h3>Applied LLMs for Product Teams</h3>
+            <p>Where to use LLMs, how to evaluate them, and how to ship them safely.</p>
+            <footer class="course-card__foot">
+              <span>4 weeks · cohort</span>
+              <a href="#" class="link-arrow">View →</a>
+            </footer>
+          </article>
+
+          <article class="course-card" data-track="data">
+            <div class="course-card__head">
+              <span class="pill pill--category">Data & AI</span>
+              <span class="course-card__level">Beginner</span>
+            </div>
+            <h3>SQL for Everyone Who Builds</h3>
+            <p>From SELECT to window functions — query data with confidence and clarity.</p>
+            <footer class="course-card__foot">
+              <span>3 weeks · self-paced</span>
+              <a href="#" class="link-arrow">View →</a>
+            </footer>
+          </article>
+
+          <article class="course-card" data-track="leadership">
+            <div class="course-card__head">
+              <span class="pill pill--category">Leadership</span>
+              <span class="course-card__level">Advanced</span>
+            </div>
+            <h3>Tech Lead to Engineering Manager</h3>
+            <p>Make the jump intentionally. Cover hiring, performance, planning and care.</p>
+            <footer class="course-card__foot">
+              <span>6 weeks · cohort</span>
+              <a href="#" class="link-arrow">View →</a>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- For teams -->
+    <section class="section">
+      <div class="container">
+        <div class="teams-band">
+          <div>
+            <span class="eyebrow">For teams</span>
+            <h2>Custom programs for organisations</h2>
+            <p>We design private cohorts and ongoing learning programs for engineering, product, and data teams. Onboarding, levelling-up, and leadership — built around your stack and goals.</p>
+            <ul class="teams-band__list">
+              <li>Discovery workshop with your leads</li>
+              <li>Tailored curriculum & assessments</li>
+              <li>Live cohorts, mentorship, office hours</li>
+              <li>Outcome reporting for L&amp;D</li>
+            </ul>
+            <a href="./contact.html" class="btn btn--primary">Talk to our learning team</a>
+          </div>
+          <div class="teams-band__visual" aria-hidden="true">
+            <div class="org-chart">
+              <div class="org-node org-node--root">Your team</div>
+              <div class="org-node">Engineers</div>
+              <div class="org-node">Product</div>
+              <div class="org-node">Data</div>
+              <div class="org-node">Leads</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--cta">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2>Ready to start learning with us?</h2>
+            <p>Pick a course, join a cohort, or partner with us on a custom program.</p>
+          </div>
+          <div class="cta-band__actions">
+            <a href="#catalog" class="btn btn--primary btn--lg">Browse catalog</a>
+            <a href="./contact.html" class="btn btn--secondary btn--lg">Train your team</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-partial="footer"></div>
+  <script src="./src/scripts/app.js"></script>
+</body>
+</html>

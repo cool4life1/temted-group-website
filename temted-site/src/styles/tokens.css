@@ -1,0 +1,127 @@
+/* =========================================================
+   TemTed Group — Design Tokens
+   Owned by: Nico (Design) · Tomi (Engineering)
+   Single source of truth for color, type, space, radius, shadow.
+   ========================================================= */
+
+:root {
+  /* ---------- Brand ---------- */
+  --brand-deep: #0B2545;        /* Primary navy */
+  --brand-deep-700: #112E58;
+  --brand-deep-500: #1E4A8A;
+  --brand-accent: #FF6B35;      /* Warm action accent */
+  --brand-accent-700: #E85A26;
+  --brand-accent-100: #FFE7DC;
+  --brand-blue: #3B82F6;        /* Secondary tech accent */
+  --brand-mint: #10B981;        /* Live status */
+
+  /* ---------- Surfaces ---------- */
+  --surface-base: #FFFFFF;
+  --surface-soft: #F7F8FB;
+  --surface-soft-2: #EEF1F7;
+  --surface-dark: #0B1220;
+  --surface-dark-2: #111A2E;
+
+  /* ---------- Text ---------- */
+  --text-primary: #0B1220;
+  --text-secondary: #2A3447;
+  --text-muted: #5B6573;
+  --text-subtle: #8A93A4;
+  --text-on-dark: #F4F6FB;
+  --text-on-dark-muted: #A8B2C5;
+
+  /* ---------- Borders ---------- */
+  --border-subtle: #E5E8EE;
+  --border-strong: #C9D0DC;
+  --border-on-dark: #1E2A44;
+
+  /* ---------- Status ---------- */
+  --status-live: #16A34A;
+  --status-live-bg: #DCFCE7;
+  --status-beta: #D97706;
+  --status-beta-bg: #FEF3C7;
+  --status-soon: #64748B;
+  --status-soon-bg: #E2E8F0;
+
+  /* ---------- Typography ---------- */
+  --font-sans: "Inter", "Söhne", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-display: "Inter", "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Type scale (clamp for fluid) */
+  --fs-display-xl: clamp(2.75rem, 5.5vw, 4.5rem);   /* 44 - 72 */
+  --fs-display-lg: clamp(2.25rem, 4.2vw, 3.5rem);   /* 36 - 56 */
+  --fs-h1: clamp(2rem, 3.4vw, 3rem);                /* 32 - 48 */
+  --fs-h2: clamp(1.625rem, 2.6vw, 2.25rem);         /* 26 - 36 */
+  --fs-h3: clamp(1.25rem, 1.6vw, 1.5rem);           /* 20 - 24 */
+  --fs-h4: 1.125rem;                                /* 18 */
+  --fs-body-lg: 1.125rem;                           /* 18 */
+  --fs-body: 1rem;                                  /* 16 */
+  --fs-body-sm: 0.875rem;                           /* 14 */
+  --fs-caption: 0.8125rem;                          /* 13 */
+  --fs-eyebrow: 0.75rem;                            /* 12 */
+
+  --lh-tight: 1.1;
+  --lh-snug: 1.25;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.65;
+
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.04em;
+  --tracking-eyebrow: 0.12em;
+
+  /* ---------- Spacing (8pt) ---------- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --sp-9: 80px;
+  --sp-10: 96px;
+  --sp-11: 128px;
+
+  /* Section padding */
+  --section-py: clamp(64px, 9vw, 120px);
+  --container-max: 1280px;
+  --container-narrow: 880px;
+  --gutter: clamp(20px, 4vw, 40px);
+
+  /* ---------- Radius ---------- */
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 16px;
+  --r-xl: 24px;
+  --r-pill: 999px;
+
+  /* ---------- Shadow ---------- */
+  --shadow-xs: 0 1px 2px rgba(11, 18, 32, 0.04);
+  --shadow-sm: 0 2px 8px rgba(11, 18, 32, 0.05);
+  --shadow-md: 0 6px 20px rgba(11, 18, 32, 0.07);
+  --shadow-lg: 0 16px 40px rgba(11, 18, 32, 0.10);
+  --shadow-glow-accent: 0 8px 28px rgba(255, 107, 53, 0.25);
+
+  /* ---------- Motion ---------- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 150ms;
+  --dur-base: 220ms;
+  --dur-slow: 380ms;
+
+  /* ---------- Layers ---------- */
+  --z-nav: 100;
+  --z-overlay: 200;
+  --z-modal: 300;
+  --z-toast: 400;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-base: 0ms;
+    --dur-slow: 0ms;
+  }
+}

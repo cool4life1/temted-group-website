@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Insights — TemTed Group</title>
+  <meta name="description" content="Articles, case studies and field notes from the TemTed Group team — on building products, growing engineers, and shipping software that lasts." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" />
+  <link rel="stylesheet" href="./src/styles/app.css" />
+</head>
+<body data-page="insights">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div data-partial="announce"></div>
+  <div data-partial="header"></div>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="section section--tight insights-hero">
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="./index.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Insights</span>
+        </nav>
+        <span class="eyebrow">Insights</span>
+        <h1 class="insights-hero__title">Field notes from building, teaching and shipping.</h1>
+        <p class="insights-hero__lede">
+          Honest writing from the TemTed team — what we're learning while building products, training engineers, and helping organisations move faster.
+        </p>
+      </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="catalog-filters" role="tablist" aria-label="Filter posts by topic">
+          <button class="chip chip--active" data-filter="all">All posts</button>
+          <button class="chip" data-filter="engineering">Engineering</button>
+          <button class="chip" data-filter="product">Product</button>
+          <button class="chip" data-filter="academy">Academy</button>
+          <button class="chip" data-filter="leadership">Leadership</button>
+          <button class="chip" data-filter="case-studies">Case studies</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured post -->
+    <section class="section section--tight">
+      <div class="container">
+        <article class="featured-post" data-track="engineering">
+          <div class="featured-post__visual" aria-hidden="true"></div>
+          <div>
+            <span class="pill pill--category">Engineering</span>
+            <h2>What we learned shipping ChoreBuddies to 50,000 households.</h2>
+            <p>
+              Three years of product decisions, dropped features, and the quiet wins nobody talks about. A behind-the-scenes look at building a consumer app from Lagos.
+            </p>
+            <div class="featured-post__meta">
+              <span>14 min read</span>
+              <span>·</span>
+              <span>By Adaeze Adesina</span>
+              <span>·</span>
+              <span>March 2026</span>
+            </div>
+            <p style="margin-top: var(--sp-4)">
+              <a href="#" class="link-arrow">Read the full story →</a>
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Posts grid -->
+    <section class="section">
+      <div class="container">
+        <header class="section-head section-head--row">
+          <div>
+            <span class="eyebrow">Latest writing</span>
+            <h2>Recent posts from the team.</h2>
+          </div>
+          <a href="#newsletter" class="btn btn--ghost">Get it monthly →</a>
+        </header>
+
+        <div class="post-grid">
+          <article class="post-card" data-track="engineering">
+            <div class="post-card__visual" aria-hidden="true"></div>
+            <span class="pill pill--category">Engineering</span>
+            <h3>Stop building generic admin panels — design for the real operator.</h3>
+            <p>Why most internal tools fail their users, and a checklist for designing tools that actually get used.</p>
+            <div class="post-card__meta">
+              <span>8 min read</span>
+              <span>Apr 2026</span>
+            </div>
+          </article>
+
+          <article class="post-card" data-track="product">
+            <div class="post-card__visual post-card__visual--alt" aria-hidden="true"></div>
+            <span class="pill pill--category">Product</span>
+            <h3>Discovery sprints that don't waste two weeks of your team's life.</h3>
+            <p>A short, opinionated playbook for running product discovery without theatre.</p>
+            <div class="post-card__meta">
+              <span>6 min read</span>
+              <span>Apr 2026</span>
+            </div>
+          </article>
+
+          <article class="post-card" data-track="academy">
+            <div class="post-card__visual post-card__visual--three" aria-hidden="true"></div>
+            <span class="pill pill--category">Academy</span>
+            <h3>What our top cohort graduates have in common — and it isn't a CS degree.</h3>
+            <p>Patterns we've seen across five cohorts of TemTed Academy and what they mean for hiring.</p>
+            <div class="post-card__meta">
+              <span>9 min read</span>
+              <span>Mar 2026</span>
+            </div>
+          </article>
+
+          <article class="post-card" data-track="leadership">
+            <div class="post-card__visual" aria-hidden="true"></div>
+            <span class="pill pill--category">Leadership</span>
+            <h3>Senior, small teams: why we staff every project this way.</h3>
+            <p>The economics and ergonomics behind our staffing model — and the trade-offs we live with.</p>
+            <div class="post-card__meta">
+              <span>7 min read</span>
+              <span>Mar 2026</span>
+            </div>
+          </article>
+
+          <article class="post-card" data-track="case-studies">
+            <div class="post-card__visual post-card__visual--alt" aria-hidden="true"></div>
+            <span class="pill pill--category">Case study</span>
+            <h3>How we cut a fintech client's onboarding drop-off by 38%.</h3>
+            <p>A short case study on the discovery, the redesign and the metrics that moved.</p>
+            <div class="post-card__meta">
+              <span>10 min read</span>
+              <span>Feb 2026</span>
+            </div>
+          </article>
+
+          <article class="post-card" data-track="engineering">
+            <div class="post-card__visual post-card__visual--three" aria-hidden="true"></div>
+            <span class="pill pill--category">Engineering</span>
+            <h3>Boring is a feature: defaults we reach for on every new build.</h3>
+            <p>The unglamorous architecture choices that have served us reliably across dozens of projects.</p>
+            <div class="post-card__meta">
+              <span>5 min read</span>
+              <span>Feb 2026</span>
+            </div>
+          </article>
+
+          <article class="post-card" data-track="product">
+            <div class="post-card__visual" aria-hidden="true"></div>
+            <span class="pill pill--category">Product</span>
+            <h3>The "useful beats clever" test we run on every feature spec.</h3>
+            <p>A four-question filter we apply before any new feature gets engineering time.</p>
+            <div class="post-card__meta">
+              <span>4 min read</span>
+              <span>Jan 2026</span>
+            </div>
+          </article>
+
+          <article class="post-card" data-track="academy">
+            <div class="post-card__visual post-card__visual--alt" aria-hidden="true"></div>
+            <span class="pill pill--category">Academy</span>
+            <h3>Why we still teach SQL by hand in 2026.</h3>
+            <p>A short defence of fundamentals in a world of generated code and faster frameworks.</p>
+            <div class="post-card__meta">
+              <span>6 min read</span>
+              <span>Jan 2026</span>
+            </div>
+          </article>
+
+          <article class="post-card" data-track="leadership">
+            <div class="post-card__visual post-card__visual--three" aria-hidden="true"></div>
+            <span class="pill pill--category">Leadership</span>
+            <h3>The honest after-action: what we got wrong on our last big launch.</h3>
+            <p>A no-spin retrospective on a project that shipped late — and what we changed because of it.</p>
+            <div class="post-card__meta">
+              <span>11 min read</span>
+              <span>Dec 2025</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section" id="newsletter">
+      <div class="container">
+        <div class="newsletter-band">
+          <span class="eyebrow" style="color: rgba(255,255,255,.7)">The TemTed monthly note</span>
+          <h2>One short, useful email a month.</h2>
+          <p>What we're building, what we're reading, what we got wrong. No spam. Easy unsubscribe.</p>
+          <form class="newsletter-form" novalidate>
+            <input type="email" name="email" placeholder="you@company.com" required autocomplete="email" aria-label="Email address" />
+            <button type="submit" class="btn btn--primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--cta">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2>Want this kind of thinking on your project?</h2>
+            <p>Talk to us about consulting, training or a product partnership.</p>
+          </div>
+          <div class="cta-band__actions">
+            <a href="./contact.html" class="btn btn--primary btn--lg">Start a conversation</a>
+            <a href="./services.html" class="btn btn--secondary btn--lg">See our services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-partial="footer"></div>
+  <script src="./src/scripts/app.js"></script>
+</body>
+</html>

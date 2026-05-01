@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Products & Apps Hub — TemTed Group</title>
+  <meta name="description" content="Explore every TemTed Group product, app, and platform. Filter by category, industry, or status to find what fits your team." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./src/styles/app.css" />
+  <script src="./src/scripts/app.js" defer></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div data-partial="announce"></div>
+  <div data-partial="header"></div>
+
+  <main id="main">
+    <!-- Hub hero -->
+    <section class="section hub-hero">
+      <div class="container">
+        <p class="eyebrow">Products & Apps Hub</p>
+        <h1 class="h-display">Everything we build, in one place.</h1>
+        <p class="lead" style="max-width:62ch;">
+          Software, platforms, and learning experiences from the TemTed Group portfolio — for families, schools, clinics, fleets, and ambitious operators across Africa and beyond.
+        </p>
+        <div class="cluster" style="margin-top:24px;">
+          <a href="#grid" class="btn btn--primary">Browse all products</a>
+          <a href="./contact.html" class="btn btn--ghost">Talk to our team</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter bar -->
+    <section class="section section--tight" style="padding-top:0;">
+      <div class="container">
+        <div class="filterbar" data-filterbar role="toolbar" aria-label="Filter products">
+          <span class="filterbar__label">Filter:</span>
+          <button class="chip is-active" data-filter="all">All</button>
+          <button class="chip" data-filter="live">Live</button>
+          <button class="chip" data-filter="beta">Beta</button>
+          <button class="chip" data-filter="soon">Coming soon</button>
+          <span class="filterbar__divider" aria-hidden="true"></span>
+          <button class="chip" data-filter="education">Education</button>
+          <button class="chip" data-filter="healthcare">Healthcare</button>
+          <button class="chip" data-filter="mobility">Mobility</button>
+          <button class="chip" data-filter="family">Family</button>
+          <button class="chip" data-filter="learning">Learning</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hub grid + sidebar -->
+    <section id="grid" class="section section--tight">
+      <div class="container">
+        <div class="hub-layout">
+          <aside class="hub-side" aria-label="Product categories">
+            <h4>Categories</h4>
+            <ul class="hub-side__list">
+              <li><a href="#" class="is-active" data-cat="all">All products</a></li>
+              <li><a href="#" data-cat="apps">Apps & Platforms</a></li>
+              <li><a href="#" data-cat="learning">Learning</a></li>
+              <li><a href="#" data-cat="healthcare">Healthcare</a></li>
+              <li><a href="#" data-cat="mobility">Mobility</a></li>
+              <li><a href="#" data-cat="education">Education</a></li>
+              <li><a href="#" data-cat="family">Family</a></li>
+            </ul>
+            <div class="hub-side__cta">
+              <h5>Have a custom need?</h5>
+              <p>We design and engineer bespoke platforms for partners who can't find an off-the-shelf fit.</p>
+              <a href="./services.html" class="btn btn--ghost btn--sm">Explore services →</a>
+            </div>
+          </aside>
+
+          <div class="product-grid">
+            <!-- ChoreBuddies -->
+            <article class="product-card" data-product-card data-tags="apps,family,live">
+              <div class="product-card__media product-card__media--tilt-1" aria-hidden="true">
+                <span class="product-card__glyph">CB</span>
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__meta">
+                  <span class="pill pill--live"><span class="pill-dot"></span>Live</span>
+                  <span class="pill pill--category">Family</span>
+                </div>
+                <h3>ChoreBuddies</h3>
+                <p>Gamified chore tracking that turns household routines into points, streaks, and rewards kids actually care about.</p>
+                <ul class="product-card__bullets">
+                  <li>Multi-child households & shared rooms</li>
+                  <li>Parent dashboard with weekly digests</li>
+                  <li>iOS, Android, and web</li>
+                </ul>
+                <div class="product-card__actions">
+                  <a href="./product-chorebuddies.html" class="btn btn--primary btn--sm">Learn more →</a>
+                  <a href="#" class="btn btn--ghost btn--sm">Open app</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Telematics -->
+            <article class="product-card" id="telematics" data-product-card data-tags="apps,mobility,beta">
+              <div class="product-card__media product-card__media--tilt-2" aria-hidden="true">
+                <span class="product-card__glyph">TX</span>
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__meta">
+                  <span class="pill pill--beta"><span class="pill-dot"></span>Beta</span>
+                  <span class="pill pill--category">Mobility</span>
+                </div>
+                <h3>Telematics</h3>
+                <p>Fleet and personal driving telemetry that surfaces fuel waste, risky driving, and route inefficiencies in plain language.</p>
+                <ul class="product-card__bullets">
+                  <li>OBD-II + GPS integration</li>
+                  <li>Driver scorecards & trip replays</li>
+                  <li>Fleet manager console</li>
+                </ul>
+                <div class="product-card__actions">
+                  <a href="./products.html#telematics" class="btn btn--primary btn--sm">Learn more →</a>
+                  <a href="./contact.html" class="btn btn--ghost btn--sm">Request demo</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- OrthoLuma -->
+            <article class="product-card" id="ortholuma" data-product-card data-tags="apps,healthcare,beta">
+              <div class="product-card__media product-card__media--tilt-3" aria-hidden="true">
+                <span class="product-card__glyph">OL</span>
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__meta">
+                  <span class="pill pill--beta"><span class="pill-dot"></span>Beta</span>
+                  <span class="pill pill--category">Healthcare</span>
+                </div>
+                <h3>OrthoLuma</h3>
+                <p>Orthodontic case management built around the patient timeline — from first scan to final retainer, all in one console.</p>
+                <ul class="product-card__bullets">
+                  <li>Treatment plan templates</li>
+                  <li>Photo & x-ray timeline</li>
+                  <li>Patient SMS reminders</li>
+                </ul>
+                <div class="product-card__actions">
+                  <a href="./products.html#ortholuma" class="btn btn--primary btn--sm">Learn more →</a>
+                  <a href="./contact.html" class="btn btn--ghost btn--sm">Talk to sales</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- HealthDoc -->
+            <article class="product-card" id="healthdoc" data-product-card data-tags="apps,healthcare,soon">
+              <div class="product-card__media product-card__media--tilt-1" aria-hidden="true">
+                <span class="product-card__glyph">HD</span>
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__meta">
+                  <span class="pill pill--soon"><span class="pill-dot"></span>Coming soon</span>
+                  <span class="pill pill--category">Healthcare</span>
+                </div>
+                <h3>HealthDoc</h3>
+                <p>Patient records, simplified. A lightweight EMR for solo practitioners and small clinics that don't need enterprise overhead.</p>
+                <ul class="product-card__bullets">
+                  <li>Encounter notes & SOAP templates</li>
+                  <li>Prescription history</li>
+                  <li>Patient portal (optional)</li>
+                </ul>
+                <div class="product-card__actions">
+                  <a href="./contact.html" class="btn btn--primary btn--sm">Join waitlist</a>
+                  <a href="./products.html#healthdoc" class="btn btn--ghost btn--sm">Preview</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Academy -->
+            <article class="product-card" data-product-card data-tags="learning,education,live">
+              <div class="product-card__media product-card__media--tilt-2" aria-hidden="true">
+                <span class="product-card__glyph">AC</span>
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__meta">
+                  <span class="pill pill--live"><span class="pill-dot"></span>Live</span>
+                  <span class="pill pill--category">Learning</span>
+                </div>
+                <h3>TemTed Academy</h3>
+                <p>Practical, project-driven courses for engineers, product builders, and operators who want to ship real things faster.</p>
+                <ul class="product-card__bullets">
+                  <li>Cohort & self-paced tracks</li>
+                  <li>Mentorship from working practitioners</li>
+                  <li>Team plans for companies</li>
+                </ul>
+                <div class="product-card__actions">
+                  <a href="./academy.html" class="btn btn--primary btn--sm">Visit Academy →</a>
+                  <a href="https://academy.temtedgroup.com" class="btn btn--ghost btn--sm">Open portal</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- ChoreBuddies Schools -->
+            <article class="product-card" data-product-card data-tags="apps,education,beta">
+              <div class="product-card__media product-card__media--tilt-3" aria-hidden="true">
+                <span class="product-card__glyph">CS</span>
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__meta">
+                  <span class="pill pill--beta"><span class="pill-dot"></span>Beta</span>
+                  <span class="pill pill--category">Education</span>
+                </div>
+                <h3>ChoreBuddies Schools</h3>
+                <p>The classroom edition of ChoreBuddies — turn responsibilities, attendance, and class jobs into a transparent rewards system.</p>
+                <ul class="product-card__bullets">
+                  <li>Teacher dashboard</li>
+                  <li>Class & house leaderboards</li>
+                  <li>Parent visibility (opt-in)</li>
+                </ul>
+                <div class="product-card__actions">
+                  <a href="./contact.html" class="btn btn--primary btn--sm">Pilot with us</a>
+                  <a href="./product-chorebuddies.html" class="btn btn--ghost btn--sm">See base app</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- FleetCore (placeholder) -->
+            <article class="product-card" data-product-card data-tags="apps,mobility,soon">
+              <div class="product-card__media product-card__media--tilt-1" aria-hidden="true">
+                <span class="product-card__glyph">FC</span>
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__meta">
+                  <span class="pill pill--soon"><span class="pill-dot"></span>Coming soon</span>
+                  <span class="pill pill--category">Mobility</span>
+                </div>
+                <h3>FleetCore</h3>
+                <p>An operations layer on top of Telematics — dispatch, maintenance, and driver compliance in a single place.</p>
+                <ul class="product-card__bullets">
+                  <li>Maintenance scheduling</li>
+                  <li>Compliance & document vault</li>
+                  <li>Multi-depot views</li>
+                </ul>
+                <div class="product-card__actions">
+                  <a href="./contact.html" class="btn btn--primary btn--sm">Join waitlist</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- ClinicLink (placeholder) -->
+            <article class="product-card" data-product-card data-tags="apps,healthcare,soon">
+              <div class="product-card__media product-card__media--tilt-2" aria-hidden="true">
+                <span class="product-card__glyph">CL</span>
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__meta">
+                  <span class="pill pill--soon"><span class="pill-dot"></span>Coming soon</span>
+                  <span class="pill pill--category">Healthcare</span>
+                </div>
+                <h3>ClinicLink</h3>
+                <p>A referral and case-handoff network for specialists, clinics, and labs working together on the same patient journey.</p>
+                <ul class="product-card__bullets">
+                  <li>Encrypted patient handoff</li>
+                  <li>Cross-clinic timeline</li>
+                  <li>Audit log built in</li>
+                </ul>
+                <div class="product-card__actions">
+                  <a href="./contact.html" class="btn btn--primary btn--sm">Express interest</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Builder Studio (placeholder) -->
+            <article class="product-card" data-product-card data-tags="learning,live">
+              <div class="product-card__media product-card__media--tilt-3" aria-hidden="true">
+                <span class="product-card__glyph">BS</span>
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__meta">
+                  <span class="pill pill--live"><span class="pill-dot"></span>Live</span>
+                  <span class="pill pill--category">Learning</span>
+                </div>
+                <h3>Builder Studio</h3>
+                <p>Hands-on labs and starter kits paired with Academy tracks — the fastest way to ship your first real product.</p>
+                <ul class="product-card__bullets">
+                  <li>Project templates</li>
+                  <li>Live code reviews</li>
+                  <li>Demo days</li>
+                </ul>
+                <div class="product-card__actions">
+                  <a href="./academy.html#studio" class="btn btn--primary btn--sm">Explore Studio</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Status legend / how to read this hub -->
+    <section class="section section--soft section--tight">
+      <div class="container">
+        <div class="legend">
+          <h3>How to read this hub</h3>
+          <p class="text-muted">Every product carries a status pill so you know what's available right now versus what's still in the oven.</p>
+          <ul class="legend__list">
+            <li>
+              <span class="pill pill--live"><span class="pill-dot"></span>Live</span>
+              <span>Generally available — sign up, install, or buy today.</span>
+            </li>
+            <li>
+              <span class="pill pill--beta"><span class="pill-dot"></span>Beta</span>
+              <span>Working software in the hands of design partners — onboarding is invite-based.</span>
+            </li>
+            <li>
+              <span class="pill pill--soon"><span class="pill-dot"></span>Coming soon</span>
+              <span>Concept and roadmap public — join the waitlist or get on the design-partner list.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA band -->
+    <section class="cta-band">
+      <div class="container cta-band__inner">
+        <div>
+          <h2>Don't see what you need?</h2>
+          <p>We build custom platforms for partners with sharper requirements than any off-the-shelf product can serve.</p>
+        </div>
+        <div class="cluster">
+          <a href="./services.html" class="btn btn--primary">Explore services</a>
+          <a href="./contact.html" class="btn btn--ghost btn--on-dark">Talk to us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-partial="footer"></div>
+</body>
+</html>
