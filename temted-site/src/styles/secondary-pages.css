@@ -668,7 +668,10 @@
   border-radius: var(--radius-md);
   background:
     radial-gradient(circle at 30% 30%, color-mix(in srgb, var(--brand-primary) 30%, transparent), transparent 60%),
-    linear-gradient(135deg, #1a1a1a, #333);
+    linear-gradient(135deg, rgba(0,0,0,.4), rgba(0,0,0,.2)),
+    url('../../public/img/blog/1.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .featured-post h2 {
   font-size: 1.875rem;
