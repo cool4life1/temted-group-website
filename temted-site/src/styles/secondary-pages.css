@@ -871,3 +871,208 @@
   font-weight: 600;
   color: var(--text-secondary, #4a4a47);
 }
+
+/* =========================================================
+   Placeholder visuals — wire public/img/* into existing hooks
+   ========================================================= */
+
+/* ---- INDEX: featured product cards (override empty/glyph) ---- */
+.featured-strip .product-card__thumb {
+  background-image: linear-gradient(135deg, rgba(0,0,0,.15), rgba(0,0,0,.45)), url('../../public/img/1.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-weight: 700;
+  letter-spacing: .08em;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  text-shadow: 0 2px 12px rgba(0,0,0,.45);
+  min-height: 180px;
+}
+.featured-strip .product-card__thumb[data-color="blue"] {
+  background-image: linear-gradient(135deg, rgba(30,58,138,.55), rgba(59,130,246,.55)), url('../../public/img/2.jpg');
+}
+.featured-strip .product-card__thumb[data-color="orange"] {
+  background-image: linear-gradient(135deg, rgba(194,65,12,.55), rgba(251,146,60,.55)), url('../../public/img/3.jpg');
+}
+.featured-strip .product-card__thumb[data-color="mint"] {
+  background-image: linear-gradient(135deg, rgba(6,95,70,.55), rgba(16,185,129,.55)), url('../../public/img/4.jpg');
+}
+/* ChoreBuddies card: hide CB monogram pseudo so image shows */
+.featured-strip .product-card__thumb--cb {
+  background-image: linear-gradient(135deg, rgba(30,58,138,.55), rgba(59,130,246,.55)), url('../../public/img/5.jpg');
+}
+.featured-strip .product-card__thumb--cb::before,
+.featured-strip .product-card__thumb--cb::after { content: none; }
+
+/* ---- INDEX: hero visual fallback image ---- */
+.hero__visual {
+  background-image: url('../../public/img/2.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+}
+.hero__visual::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(10,15,30,.5), rgba(10,15,30,.15));
+  z-index: 0;
+}
+.hero__visual .eco { position: relative; z-index: 1; }
+
+/* ---- INDEX: case study covers ---- */
+.case__cover {
+  background-image: linear-gradient(180deg, rgba(0,0,0,.1), rgba(0,0,0,.55)), url('../../public/img/3.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  min-height: 200px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-weight: 600;
+}
+.case-grid .case:nth-child(2) .case__cover {
+  background-image: linear-gradient(180deg, rgba(0,0,0,.1), rgba(0,0,0,.55)), url('../../public/img/4.jpg');
+}
+.case-grid .case:nth-child(3) .case__cover {
+  background-image: linear-gradient(180deg, rgba(0,0,0,.1), rgba(0,0,0,.55)), url('../../public/img/5.jpg');
+}
+
+/* ---- INDEX: insight cards (add image header) ---- */
+.insight-card {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+.insight-card::before {
+  content: "";
+  display: block;
+  height: 160px;
+  background-image: url('../../public/img/blog/1.jpg');
+  background-size: cover;
+  background-position: center;
+  margin: -16px -16px 14px;
+  border-radius: 12px 12px 0 0;
+}
+.grid-3 .insight-card:nth-child(2)::before {
+  background-image: url('../../public/img/blog/2.png');
+}
+.grid-3 .insight-card:nth-child(3)::before {
+  background-image: url('../../public/img/blog/3.png');
+}
+
+/* ---- PRODUCTS: product card media (override glyph background) ---- */
+.product-card__media {
+  background-size: cover !important;
+  background-position: center !important;
+  position: relative;
+}
+.product-card__media::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(20,25,45,.45), rgba(20,25,45,.15));
+}
+.product-card__glyph {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0,0,0,.5);
+}
+.product-card__media--tilt-1 { background-image: url('../../public/img/1.jpg') !important; }
+.product-card__media--tilt-2 { background-image: url('../../public/img/2.jpg') !important; }
+.product-card__media--tilt-3 { background-image: url('../../public/img/3.jpg') !important; }
+
+/* ---- INSIGHTS: post-card visuals ---- */
+.post-card__visual {
+  background-image: url('../../public/img/blog/1.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 180px;
+  border-radius: 12px 12px 0 0;
+}
+.post-card__visual--alt {
+  background-image: url('../../public/img/blog/2.png');
+}
+.post-card__visual--three {
+  background-image: url('../../public/img/blog/3.png');
+}
+
+/* ---- ABOUT: team member avatars ---- */
+.member__avatar {
+  background-size: cover !important;
+  background-position: center !important;
+  color: transparent !important;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+}
+.team-grid .member:nth-child(1) .member__avatar { background-image: url('../../public/img/team/1.jpg'); }
+.team-grid .member:nth-child(2) .member__avatar { background-image: url('../../public/img/team/2.jpg'); }
+.team-grid .member:nth-child(3) .member__avatar { background-image: url('../../public/img/team/3.jpg'); }
+.team-grid .member:nth-child(4) .member__avatar { background-image: url('../../public/img/team/4.jpg'); }
+
+/* ---- ABOUT: press / partners logos ---- */
+.press-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 18px;
+  align-items: center;
+}
+.press-logo {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70px;
+  color: transparent;
+  filter: grayscale(.2);
+  opacity: .85;
+  transition: opacity .15s ease, filter .15s ease;
+}
+.press-logo:hover { opacity: 1; filter: none; }
+.press-grid .press-logo:nth-child(1) { background-image: url('../../public/img/portfolio/feddo.jpg'); }
+.press-grid .press-logo:nth-child(2) { background-image: url('../../public/img/portfolio/bip.jpg'); }
+.press-grid .press-logo:nth-child(3) { background-image: url('../../public/img/portfolio/kingdom.png'); }
+.press-grid .press-logo:nth-child(4) { background-image: url('../../public/img/portfolio/glenmoy.jpg'); }
+.press-grid .press-logo:nth-child(5) { background-image: url('../../public/img/portfolio/kikka.png'); }
+.press-grid .press-logo:nth-child(6) { background-image: url('../../public/img/portfolio/vestive.png'); }
+.press-grid .press-logo:nth-child(7) { background-image: url('../../public/img/portfolio/sportspower.jpg'); }
+.press-grid .press-logo:nth-child(8) { background-image: url('../../public/img/portfolio/yes.jpg'); }
+
+/* ---- CHOREBUDDIES: product hero visual ---- */
+.product-hero__visual {
+  background-image: linear-gradient(135deg, rgba(30,58,138,.45), rgba(59,130,246,.35)), url('../../public/img/5.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 18px;
+  min-height: 360px;
+}
+
+/* ---- ACADEMY: teams-band visual ---- */
+.teams-band__visual {
+  background-image: linear-gradient(135deg, rgba(20,25,45,.55), rgba(20,25,45,.25)), url('../../public/img/4.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  min-height: 320px;
+  position: relative;
+}
+.teams-band__visual .org-chart { position: relative; z-index: 1; }
+
+/* ---- INDEX: industry tab visual placeholders ---- */
+.industries-tabpanel .visual {
+  background-image: url('../../public/img/1.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 240px;
+  border-radius: 12px;
+  color: transparent;
+}
+#p-health .industries-tabpanel .visual { background-image: url('../../public/img/2.jpg'); }
+#p-mobility .industries-tabpanel .visual { background-image: url('../../public/img/3.jpg'); }
+#p-fin .industries-tabpanel .visual { background-image: url('../../public/img/4.jpg'); }
