@@ -26,15 +26,14 @@
 .brand__mark {
   width: 32px; height: 32px;
   display: grid; place-items: center;
-  background: var(--brand-deep);
-  color: #fff;
+  background: var(--brand-deep) url("../../public/img/logo-light.png") center/65% no-repeat;
+  color: transparent;
   border-radius: 8px;
   font-weight: 800;
   font-size: 0.875rem;
+  overflow: hidden;
 }
-.brand__mark::before {
-  content: "T";
-}
+.brand--on-dark .brand__mark { background: #fff url("../../public/img/logo-light.png") center/65% no-repeat; }
 
 /* Primary nav */
 .primary-nav { display: flex; gap: var(--sp-2); align-items: center; }
@@ -283,4 +282,4 @@
 }
 .footer-bottom__links { display: flex; gap: var(--sp-5); flex-wrap: wrap; }
 .brand--on-dark { color: #fff; }
-.brand--on-dark .brand__mark { background: #fff; color: var(--brand-deep); }
+.brand--on-dark { color: #fff; }

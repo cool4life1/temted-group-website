@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" />
+    <link rel="icon" type="image/x-icon" href="./public/img/favicon.ico" />
+  <link rel="icon" type="image/png" href="./public/img/logo-light.png" />
   <link rel="stylesheet" href="./src/styles/app.css" />
 </head>
 <body>
@@ -98,12 +100,15 @@
 
         <div class="featured-strip">
           <article class="product-card reveal">
-            <div class="product-card__thumb" data-color="navy">CB</div>
+            <div class="product-card__thumb product-card__thumb--cb" data-color="navy" aria-label="ChoreBuddies"></div>
             <div class="product-card__body">
               <span class="pill pill--live"><span class="pill-dot"></span>Live</span>
               <h3>ChoreBuddies</h3>
-              <p>Family chore tracking and rewards — gamified for kids, simple for parents.</p>
-              <a href="./product-chorebuddies.html" class="btn btn--secondary btn--block">Learn more</a>
+              <p>Help your children build consistent routines and grow responsible habits through fun, interactive checklists and rewards.</p>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                <a href="./product-chorebuddies.html" class="btn btn--secondary btn--sm">Learn more</a>
+                <a href="https://chorebuddies.app" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Open app ↗</a>
+              </div>
             </div>
           </article>
 
