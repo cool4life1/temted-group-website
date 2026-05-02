@@ -47,7 +47,12 @@
             </ul>
           </div>
 
-          <aside class="academy-hero__panel" aria-label="Featured cohort">
+          <div class="academy-hero__visual">
+            <img src="./public/img/5.jpg" alt="Students collaborating during a TemTed Academy cohort session" loading="eager" />
+          </div>
+        </div>
+
+        <aside class="academy-hero__panel" aria-label="Featured cohort">
             <span class="pill pill--live"><span class="pill-dot"></span>Open enrolment</span>
             <h3>Salesforce Admin · Career Track</h3>
             <p>Live cohort delivered with mentorship, real-world labs, and career support.</p>
@@ -58,7 +63,6 @@
             </ul>
             <a href="https://academy.temtedgroup.com" target="_blank" rel="noopener" class="btn btn--primary">Enrol on Academy ↗</a>
           </aside>
-        </div>
       </div>
     </section>
 
@@ -107,93 +111,119 @@
             <span class="eyebrow">Catalog</span>
             <h2>Featured courses</h2>
           </div>
-          <div class="filter-row" role="tablist" aria-label="Filter courses">
+          <div class="filter-row catalog-filters" role="tablist" aria-label="Filter courses">
             <button class="chip chip--active" data-filter="all">All</button>
             <button class="chip" data-filter="engineering">Engineering</button>
             <button class="chip" data-filter="product">Product</button>
-            <button class="chip" data-filter="data">Data & AI</button>
             <button class="chip" data-filter="leadership">Leadership</button>
           </div>
         </header>
 
         <div class="course-grid">
-          <article class="course-card" data-track="product">
-            <div class="course-card__head">
-              <span class="pill pill--category">Product</span>
-              <span class="course-card__level">Career track</span>
-            </div>
-            <h3>Business Analyst</h3>
-            <p>Requirements gathering, stakeholder management, and turning business needs into clear, actionable specs.</p>
-            <footer class="course-card__foot">
-              <span>Live cohort · mentorship</span>
-              <a href="https://academy.temtedgroup.com" target="_blank" rel="noopener" class="link-arrow">Enrol ↗</a>
-            </footer>
-          </article>
 
-          <article class="course-card" data-track="leadership">
-            <div class="course-card__head">
-              <span class="pill pill--category">Leadership</span>
-              <span class="course-card__level">Career track</span>
+          <!-- Project Engineer 101 -->
+          <article class="course-card reveal" data-track="engineering">
+            <div class="course-card__thumb">
+              <!-- Replace src with real thumbnail when available -->
+              <img src="./public/img/5.jpg" alt="Project Engineer 101 course thumbnail" loading="lazy" />
             </div>
-            <h3>Scrum Master</h3>
-            <p>Lead agile teams with confidence — facilitation, ceremonies, coaching, and removing real blockers.</p>
-            <footer class="course-card__foot">
-              <span>Live cohort · mentorship</span>
-              <a href="https://academy.temtedgroup.com" target="_blank" rel="noopener" class="link-arrow">Enrol ↗</a>
-            </footer>
-          </article>
-
-          <article class="course-card" data-track="product">
-            <div class="course-card__head">
-              <span class="pill pill--category">Product</span>
-              <span class="course-card__level">Career track</span>
-            </div>
-            <h3>Product Owner</h3>
-            <p>Own the backlog and the outcome — discovery, prioritisation, and shipping value sprint after sprint.</p>
-            <footer class="course-card__foot">
-              <span>Live cohort · mentorship</span>
-              <a href="https://academy.temtedgroup.com" target="_blank" rel="noopener" class="link-arrow">Enrol ↗</a>
-            </footer>
-          </article>
-
-          <article class="course-card" data-track="engineering">
             <div class="course-card__head">
               <span class="pill pill--category">Engineering</span>
-              <span class="course-card__level">Career track</span>
+              <span class="course-card__level">Beginner</span>
             </div>
-            <h3>Salesforce Admin</h3>
-            <p>Become a job-ready Salesforce Administrator with real-world labs, configuration, automation and security.</p>
+            <h3>Project Engineer 101</h3>
+            <p>Master the fundamentals of project engineering — schedules, scope, cost, and how to keep complex builds on track from day one.</p>
             <footer class="course-card__foot">
-              <span>Live cohort · career support</span>
+              <span class="course-card__price">$250</span>
               <a href="https://academy.temtedgroup.com" target="_blank" rel="noopener" class="link-arrow">Enrol ↗</a>
             </footer>
           </article>
 
-          <article class="course-card" data-track="data">
+          <!-- Primavera Like a Pro -->
+          <article class="course-card reveal" data-track="engineering">
+            <div class="course-card__thumb">
+              <img src="./public/img/5.jpg" alt="Primavera Like a Pro course thumbnail" loading="lazy" />
+            </div>
             <div class="course-card__head">
-              <span class="pill pill--category">Data & AI</span>
-              <span class="course-card__level">Specialist</span>
+              <span class="pill pill--category">Engineering</span>
+              <span class="course-card__level">Beginner</span>
             </div>
-            <h3>Salesforce Account Engagement</h3>
-            <p>Run modern B2B marketing automation on Salesforce — campaigns, scoring, journeys and reporting.</p>
+            <h3>Primavera Like a Pro</h3>
+            <p>Hands-on Primavera P6 training — from project setup and WBS to baselines, resource levelling, and earned value reporting.</p>
             <footer class="course-card__foot">
-              <span>Live cohort · mentorship</span>
+              <span class="course-card__price">$250</span>
               <a href="https://academy.temtedgroup.com" target="_blank" rel="noopener" class="link-arrow">Enrol ↗</a>
             </footer>
           </article>
 
-          <article class="course-card" data-track="leadership">
+          <!-- Product Owner -->
+          <article class="course-card reveal" data-track="product">
+            <div class="course-card__thumb">
+              <img src="./public/img/5.jpg" alt="Product Owner course thumbnail" loading="lazy" />
+            </div>
+            <div class="course-card__head">
+              <span class="pill pill--category">Product</span>
+              <span class="course-card__level">Advanced</span>
+            </div>
+            <h3>Product Owner</h3>
+            <p>Own the backlog and the outcome — discovery, prioritisation, stakeholder alignment, and shipping value sprint after sprint.</p>
+            <footer class="course-card__foot">
+              <span class="course-card__price">$797</span>
+              <a href="https://academy.temtedgroup.com" target="_blank" rel="noopener" class="link-arrow">Enrol ↗</a>
+            </footer>
+          </article>
+
+          <!-- Mining & Tailings Management -->
+          <article class="course-card reveal" data-track="engineering">
+            <div class="course-card__thumb">
+              <img src="./public/img/5.jpg" alt="Mining and Tailings Management course thumbnail" loading="lazy" />
+            </div>
+            <div class="course-card__head">
+              <span class="pill pill--category">Engineering</span>
+              <span class="course-card__level">Beginner</span>
+            </div>
+            <h3>Mining &amp; Tailings Management</h3>
+            <p>Foundations of mining operations and tailings storage facility management — safety, regulation, and modern best practice.</p>
+            <footer class="course-card__foot">
+              <span class="course-card__price course-card__price--free">Free</span>
+              <a href="https://academy.temtedgroup.com" target="_blank" rel="noopener" class="link-arrow">Enrol ↗</a>
+            </footer>
+          </article>
+
+          <!-- Scrum Master -->
+          <article class="course-card reveal" data-track="leadership">
+            <div class="course-card__thumb">
+              <img src="./public/img/5.jpg" alt="Scrum Master course thumbnail" loading="lazy" />
+            </div>
             <div class="course-card__head">
               <span class="pill pill--category">Leadership</span>
-              <span class="course-card__level">For teams</span>
+              <span class="course-card__level">Advanced</span>
             </div>
-            <h3>Custom corporate cohorts</h3>
-            <p>Private cohorts designed around your stack, your goals, and the outcomes your L&amp;D team needs to prove.</p>
+            <h3>Scrum Master</h3>
+            <p>Lead agile teams with confidence — facilitation, sprint ceremonies, coaching, impediment removal, and scaled Scrum frameworks.</p>
             <footer class="course-card__foot">
-              <span>Bespoke · for organisations</span>
-              <a href="./contact.html" class="link-arrow">Talk to us →</a>
+              <span class="course-card__price">$797</span>
+              <a href="https://academy.temtedgroup.com" target="_blank" rel="noopener" class="link-arrow">Enrol ↗</a>
             </footer>
           </article>
+
+          <!-- Salesforce Consultant -->
+          <article class="course-card reveal" data-track="engineering">
+            <div class="course-card__thumb">
+              <img src="./public/img/5.jpg" alt="Salesforce Consultant course thumbnail" loading="lazy" />
+            </div>
+            <div class="course-card__head">
+              <span class="pill pill--category">Engineering</span>
+              <span class="course-card__level">Professional</span>
+            </div>
+            <h3>Salesforce Consultant</h3>
+            <p>Become a job-ready Salesforce consultant — architecture, configuration, automation, integrations, and delivering real client outcomes.</p>
+            <footer class="course-card__foot">
+              <span class="course-card__price">$1,197</span>
+              <a href="https://academy.temtedgroup.com" target="_blank" rel="noopener" class="link-arrow">Enrol ↗</a>
+            </footer>
+          </article>
+
         </div>
       </div>
     </section>

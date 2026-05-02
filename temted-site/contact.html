@@ -79,7 +79,13 @@
           </aside>
 
           <!-- Form column -->
-          <form class="contact-form" novalidate>
+          <form class="contact-form" method="post" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8">
+            <!-- Salesforce hidden fields -->
+            <input type="hidden" name="captcha_settings" value='{"keyname":"TemTed_Group_2","fallback":"true","orgId":"00D2x000000rxOC","ts":""}'>
+            <input type="hidden" name="oid" value="00D2x000000rxOC">
+            <input type="hidden" name="retURL" value="http://temtedgroup.com">
+            <input type="hidden" name="lead_source" value="Website">
+
             <header class="contact-form__head">
               <h2>Send us a note</h2>
               <p>The more context you share, the sharper our reply will be.</p>
@@ -88,7 +94,7 @@
             <div class="form-row form-row--two">
               <label class="form-field">
                 <span>Full name</span>
-                <input type="text" name="name" required autocomplete="name" placeholder="Your name" />
+                <input type="text" name="last_name" required autocomplete="name" placeholder="Your name" />
               </label>
               <label class="form-field">
                 <span>Work email</span>
@@ -103,7 +109,7 @@
               </label>
               <label class="form-field">
                 <span>I'm reaching out about</span>
-                <select name="topic" required>
+                <select name="title" required>
                   <option value="">Select an option</option>
                   <option>Consulting engagement</option>
                   <option>Custom software build</option>
@@ -118,29 +124,14 @@
 
             <div class="form-row">
               <label class="form-field">
-                <span>Approximate budget (optional)</span>
-                <select name="budget">
-                  <option value="">Not sure yet</option>
-                  <option>Under $10k</option>
-                  <option>$10k – $50k</option>
-                  <option>$50k – $150k</option>
-                  <option>$150k+</option>
-                  <option>Retainer</option>
-                </select>
+                <span>Tell us a bit more</span>
+                <textarea name="description" rows="6" required placeholder="What problem are you trying to solve? Any timing or constraints we should know?"></textarea>
               </label>
             </div>
 
             <div class="form-row">
-              <label class="form-field">
-                <span>Tell us a bit more</span>
-                <textarea name="message" rows="6" required placeholder="What problem are you trying to solve? Any timing or constraints we should know?"></textarea>
-              </label>
+              <div class="g-recaptcha" data-sitekey="6LcRG_UUAAAAAChZ8QNBXYoOPM3v3P7D-RyZk5vn"></div>
             </div>
-
-            <label class="form-check">
-              <input type="checkbox" name="newsletter" />
-              <span>Also send me the TemTed monthly note (no spam, easy unsubscribe).</span>
-            </label>
 
             <div class="form-actions">
               <button type="submit" class="btn btn--primary btn--lg">Send message →</button>
@@ -184,5 +175,17 @@
 
   <div data-partial="footer"></div>
   <script src="./src/scripts/app.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script>
+    function timestamp() {
+      var response = document.getElementById("g-recaptcha-response");
+      if (response == null || response.value.trim() == "") {
+        var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);
+        elems["ts"] = JSON.stringify(new Date().getTime());
+        document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems);
+      }
+    }
+    setInterval(timestamp, 500);
+  </script>
 </body>
 </html>

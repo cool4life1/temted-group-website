@@ -238,19 +238,24 @@
   function initCatalogFilters() {
     $$('.catalog-filters').forEach(bar => {
       const chips = $$('.chip', bar);
-      // Items with data-track in the same page; scoped by section via the closest .section-head--row's parent .container? Use a sensible scope: the next sibling section content.
       const items = $$('[data-track]');
+      const emptyState = document.getElementById('post-grid-empty');
 
       chips.forEach(chip => {
         chip.addEventListener('click', () => {
           chips.forEach(c => c.classList.remove('chip--active'));
           chip.classList.add('chip--active');
           const target = chip.getAttribute('data-filter');
+          let visibleCount = 0;
           items.forEach(item => {
             const track = item.getAttribute('data-track');
             const show = target === 'all' || track === target;
             item.style.display = show ? '' : 'none';
+            if (show) visibleCount++;
           });
+          if (emptyState) {
+            emptyState.classList.toggle('is-visible', visibleCount === 0);
+          }
         });
       });
     });
@@ -322,14 +327,50 @@
     } catch {}
   }
 
+  /* ---------- Scroll to top ---------- */
+  function initScrollTop() {
+    const btn = document.getElementById('scroll-top');
+    if (!btn) return;
+    const toggle = () => btn.classList.toggle('is-visible', window.scrollY > 400);
+    window.addEventListener('scroll', toggle, { passive: true });
+    toggle();
+    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  }
+
   /* ---------- Year stamp ---------- */
   function stampYear() {
     $$('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
   }
 
+  /* ---------- Dark / Light mode ---------- */
+  function initTheme() {
+    // Apply saved preference immediately (called before partials so no flash)
+    const saved = localStorage.getItem('tt_theme');
+    if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+  }
+
+  function initThemeToggle() {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if (isDark) {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('tt_theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('tt_theme', 'dark');
+      }
+    });
+  }
+
   /* ---------- Boot ---------- */
+  // Apply theme before DOM renders to prevent flash
+  initTheme();
+
   document.addEventListener('DOMContentLoaded', async () => {
     await loadPartials();
+    initThemeToggle();
     initTabs();
     initAccordion();
     initFilters();
@@ -337,6 +378,7 @@
     initModals();
     initReveal();
     initAnnounce();
+    initScrollTop();
     stampYear();
   });
 })();

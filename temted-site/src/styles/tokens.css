@@ -125,3 +125,43 @@
     --dur-slow: 0ms;
   }
 }
+
+/* =========================================================
+   Dark mode overrides
+   Applied via [data-theme="dark"] on <html>
+   ========================================================= */
+[data-theme="dark"] {
+  /* Surfaces */
+  --surface-base: #0D1117;
+  --surface-soft: #161B22;
+  --surface-soft-2: #1E2530;
+  --surface-dark: #010409;
+  --surface-dark-2: #0D1117;
+
+  /* Text */
+  --text-primary: #E6EDF3;
+  --text-secondary: #B0BEC5;
+  --text-muted: #7D8590;
+  --text-subtle: #5A6370;
+  --text-on-dark: #E6EDF3;
+  --text-on-dark-muted: #7D8590;
+
+  /* Borders */
+  --border-subtle: #21262D;
+  --border-strong: #30363D;
+  --border-on-dark: #21262D;
+
+  /* Brand stays consistent */
+  --brand-deep: #1F6FEB;
+  --brand-deep-700: #388BFD;
+  --brand-deep-500: #58A6FF;
+  --brand-accent: #FF6B35;
+  --brand-accent-700: #E85A26;
+  --brand-accent-100: #3D1E13;
+
+  /* Shadows (reduced on dark) */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.7);
+}
