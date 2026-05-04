@@ -7,7 +7,7 @@
       <span>TemTed Group</span>
     </a>
 
-    <nav class="mobile-nav" aria-label="Primary">
+    <nav class="desktop-nav" aria-label="Primary">
       <ul class="primary-nav" style="list-style:none;padding:0;margin:0;">
         <li class="primary-nav__item">
           <a class="primary-nav__link" href="./products.html" data-mega aria-haspopup="true" aria-expanded="false" aria-controls="mega-products">
@@ -95,10 +95,30 @@
       </button>
       <a href="./contact.html" class="btn btn--primary">Get in touch</a>
       <button class="nav-toggle btn btn--ghost" aria-label="Toggle menu" aria-expanded="false">
-        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true">
-          <path d="M0 1h20M0 7h20M0 13h20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <svg width="22" height="16" viewBox="0 0 22 16" fill="none" aria-hidden="true">
+          <path d="M0 1h22M0 8h22M0 15h22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
       </button>
     </div>
   </div>
 </header>
+
+<!-- Mobile nav drawer (toggled by .nav-toggle) -->
+<div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile navigation" aria-hidden="true">
+  <ul class="primary-nav" style="list-style:none;padding:0;margin:0;">
+    <li class="primary-nav__item"><a class="primary-nav__link" href="./products.html">Products</a></li>
+    <li class="primary-nav__item"><a class="primary-nav__link" href="./services.html">Solutions</a></li>
+    <li class="primary-nav__item"><a class="primary-nav__link" href="./academy.html">Academy</a></li>
+    <li class="primary-nav__item"><a class="primary-nav__link" href="./about.html">About</a></li>
+    <li class="primary-nav__item"><a class="primary-nav__link" href="./insights.html">Insights</a></li>
+    <li class="primary-nav__item"><a class="primary-nav__link" href="./contact.html">Contact</a></li>
+    <li class="primary-nav__item" style="margin-top:var(--sp-5);border-top:1px solid var(--border-subtle);padding-top:var(--sp-4);">
+      <a class="primary-nav__link" href="https://academy.temtedgroup.com">Academy Portal</a>
+    </li>
+    <li class="primary-nav__item"><a class="primary-nav__link" href="https://chorebuddies.app">ChoreBuddies App</a></li>
+    <li class="primary-nav__item"><a class="primary-nav__link" href="https://ortholuma.lovable.app/auth" target="_blank" rel="noopener">OrthoLuma Console</a></li>
+    <li class="primary-nav__item" style="margin-top:auto;padding-top:var(--sp-5);">
+      <a href="./contact.html" class="btn btn--primary" style="width:100%;justify-content:center;">Get in touch</a>
+    </li>
+  </ul>
+</div>
