@@ -114,7 +114,7 @@
   /* ---------- Mobile nav ---------- */
   function initMobileNav() {
     const toggle = $('.nav-toggle');
-    const wrap = $('.mobile-nav');
+    const wrap = $('.mobile-nav-drawer');
     if (!toggle || !wrap) return;
     toggle.addEventListener('click', () => {
       const open = wrap.classList.toggle('is-open');
