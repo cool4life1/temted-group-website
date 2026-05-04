@@ -933,34 +933,7 @@
 }
 .contact-info-card a:hover { opacity: .75; }
 
-/* Home — ChoreBuddies branded thumbnail (.product-card__thumb--cb) */
-.product-card__thumb--cb {
-  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-  position: relative;
-  overflow: hidden;
-}
-.product-card__thumb--cb::before {
-  content: "CB";
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  font-family: "JetBrains Mono", ui-monospace, monospace;
-  font-weight: 700;
-  font-size: 28px;
-  color: rgba(255,255,255,.95);
-  letter-spacing: .08em;
-}
-.product-card__thumb--cb::after {
-  content: "";
-  position: absolute;
-  right: -30px;
-  bottom: -30px;
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,255,255,.18), transparent 70%);
-}
+/* .product-card__thumb--cb — styles now live in the featured-strip block below */
 
 /* Contact form — fix invisible field contrast */
 .contact-form .form-field input,
@@ -998,36 +971,155 @@
    Placeholder visuals — wire public/img/* into existing hooks
    ========================================================= */
 
-/* ---- INDEX: featured product cards (override empty/glyph) ---- */
+/* ---- INDEX: featured product cards — logo thumbnails ---- */
 .featured-strip .product-card__thumb {
-  background-image: linear-gradient(135deg, rgba(0,0,0,.15), rgba(0,0,0,.45)), url('../../public/img/1.jpg');
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  font-family: "JetBrains Mono", ui-monospace, monospace;
-  font-weight: 700;
-  letter-spacing: .08em;
-  display: grid;
-  place-items: center;
-  font-size: 28px;
-  text-shadow: 0 2px 12px rgba(0,0,0,.45);
   min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 24px;
+  overflow: hidden;
 }
-.featured-strip .product-card__thumb[data-color="blue"] {
-  background-image: linear-gradient(135deg, rgba(30,58,138,.55), rgba(59,130,246,.55)), url('../../public/img/2.jpg');
+/* Shared logo image sizing */
+.featured-strip .product-card__logo {
+  display: block;
+  max-width: 100%;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
-.featured-strip .product-card__thumb[data-color="orange"] {
-  background-image: linear-gradient(135deg, rgba(194,65,12,.55), rgba(251,146,60,.55)), url('../../public/img/3.jpg');
-}
-.featured-strip .product-card__thumb[data-color="mint"] {
-  background-image: linear-gradient(135deg, rgba(6,95,70,.55), rgba(16,185,129,.55)), url('../../public/img/4.jpg');
-}
-/* ChoreBuddies card: hide CB monogram pseudo so image shows */
+/* ChoreBuddies — light neutral so transparent PNG reads cleanly */
 .featured-strip .product-card__thumb--cb {
-  background-image: linear-gradient(135deg, rgba(30,58,138,.55), rgba(59,130,246,.55)), url('../../public/img/5.jpg');
+  background: #F5F3FF;
 }
 .featured-strip .product-card__thumb--cb::before,
 .featured-strip .product-card__thumb--cb::after { content: none; }
+/* OrthoLuma — soft lavender tint to complement purple spine mark */
+.featured-strip .product-card__thumb--ol {
+  background: #F7F4FF;
+  border-bottom: 1px solid rgba(155,111,232,.12);
+}
+/* TemTed Academy — pale teal tint matching cap/wordmark colours */
+.featured-strip .product-card__thumb--ta {
+  background: #EDF9F7;
+}
+
+/* =========================================================
+   LEGAL PAGES — Privacy · Terms · Security · Sitemap
+   ========================================================= */
+.legal-doc {
+  max-width: 760px;
+  margin-inline: auto;
+  padding-block: var(--sp-6) var(--sp-10);
+}
+.legal-doc__head {
+  border-bottom: 1px solid var(--border-subtle, rgba(0,0,0,.08));
+  padding-bottom: var(--sp-5);
+  margin-bottom: var(--sp-7);
+}
+.legal-doc__head h1 {
+  font-size: var(--fs-display-md, 2.5rem);
+  margin: 0 0 var(--sp-2);
+}
+.legal-doc__meta {
+  font-size: var(--fs-body-sm, 0.875rem);
+  color: var(--text-muted);
+  margin: 0 0 var(--sp-3);
+}
+.legal-doc__intro {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin: var(--sp-4) 0 0;
+  max-width: 60ch;
+}
+.legal-doc__body h2 {
+  font-size: 1.35rem;
+  margin: var(--sp-7) 0 var(--sp-3);
+  padding-top: var(--sp-5);
+  border-top: 1px solid var(--border-subtle, rgba(0,0,0,.06));
+}
+.legal-doc__body h3 {
+  font-size: 1.05rem;
+  margin: var(--sp-5) 0 var(--sp-2);
+  color: var(--text-primary);
+}
+.legal-doc__body p,
+.legal-doc__body address {
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin: 0 0 var(--sp-4);
+  font-style: normal;
+}
+.legal-doc__body ul,
+.legal-doc__body ol {
+  padding-left: 1.5rem;
+  margin: 0 0 var(--sp-4);
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+.legal-doc__body li { margin-bottom: var(--sp-2); }
+.legal-doc__body a { color: var(--brand-accent, #FF6B35); text-underline-offset: 3px; }
+.legal-doc__body a:hover { opacity: .8; }
+
+/* Security page — pillar grid */
+.security-pillars {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-5);
+  margin: var(--sp-5) 0 var(--sp-6);
+}
+@media (max-width: 640px) { .security-pillars { grid-template-columns: 1fr; } }
+.security-pillar {
+  border: 1px solid var(--border-subtle, rgba(0,0,0,.08));
+  border-radius: 16px;
+  padding: var(--sp-5);
+  background: var(--surface-soft);
+}
+.security-pillar h3 {
+  margin: 0 0 var(--sp-3);
+  font-size: 1rem;
+  border-top: none;
+  padding-top: 0;
+}
+.security-pillar ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.9rem;
+}
+
+/* Sitemap page */
+.sitemap-body { columns: 2; column-gap: var(--sp-8); }
+@media (max-width: 640px) { .sitemap-body { columns: 1; } }
+.sitemap-section {
+  break-inside: avoid;
+  margin-bottom: var(--sp-7);
+}
+.sitemap-section h2 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin: 0 0 var(--sp-3);
+  padding-top: 0;
+  border-top: none;
+}
+.sitemap-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sitemap-list li { margin-bottom: 6px; }
+.sitemap-list ul {
+  padding-left: 1rem;
+  margin-top: 6px;
+}
+.sitemap-list a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.sitemap-list a:hover { color: var(--brand-accent, #FF6B35); }
 
 /* ---- INDEX: hero visual fallback image ---- */
 .hero__visual {

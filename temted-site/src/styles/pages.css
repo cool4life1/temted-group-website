@@ -24,11 +24,13 @@
 /* ---------- Home: Featured Products strip ---------- */
 .featured-strip {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--sp-5);
+  max-width: 960px;
+  margin-inline: auto;
 }
-@media (max-width: 1040px) { .featured-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 560px) { .featured-strip { grid-template-columns: 1fr; } }
+@media (max-width: 860px) { .featured-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 640px; } }
+@media (max-width: 560px) { .featured-strip { grid-template-columns: 1fr; max-width: 420px; } }
 
 /* ---------- Home: Why TemTed (split) ---------- */
 .why-split {

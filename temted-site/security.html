@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Security - TemTed Group</title>
+  <meta name="description" content="How TemTed Group protects your data — our security practices, responsible disclosure programme, and how to report a vulnerability." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" />
+  <link rel="icon" type="image/x-icon" href="./public/img/favicon.ico" />
+  <link rel="icon" type="image/png" href="./public/img/logo-light.png" />
+  <link rel="stylesheet" href="./src/styles/app.css" />
+</head>
+<body data-page="legal">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div data-partial="announce"></div>
+  <div data-partial="header"></div>
+
+  <main id="main">
+
+    <section class="section section--tight">
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="./index.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Security</span>
+        </nav>
+
+        <div class="legal-doc">
+          <header class="legal-doc__head">
+            <h1>Security</h1>
+            <p class="legal-doc__meta">Last updated: 1 May 2026</p>
+            <p class="legal-doc__intro">Security is a core part of how we build every TemTed Group product. This page describes our security practices and how to report a vulnerability.</p>
+          </header>
+
+          <div class="legal-doc__body">
+
+            <h2>Our approach</h2>
+            <p>We apply a defence-in-depth approach across our infrastructure, application, and operational layers. Security is considered at every stage — from architecture reviews and code review to deployment pipelines and incident response.</p>
+
+            <div class="security-pillars">
+              <div class="security-pillar">
+                <h3>Infrastructure</h3>
+                <ul>
+                  <li>All services hosted on major cloud providers (AWS, Google Cloud) with SOC 2 Type II certification</li>
+                  <li>Network segmentation and least-privilege IAM policies throughout</li>
+                  <li>Automated vulnerability scanning on all cloud resources</li>
+                  <li>DDoS protection and web application firewall (WAF) at the edge</li>
+                </ul>
+              </div>
+              <div class="security-pillar">
+                <h3>Data protection</h3>
+                <ul>
+                  <li>All data encrypted in transit using TLS 1.2 or higher</li>
+                  <li>Data at rest encrypted using AES-256</li>
+                  <li>Passwords hashed using bcrypt with per-user salts — we never store plain text passwords</li>
+                  <li>Payment card data handled exclusively by PCI-DSS certified processors (Stripe)</li>
+                  <li>Database backups encrypted and tested regularly</li>
+                </ul>
+              </div>
+              <div class="security-pillar">
+                <h3>Application security</h3>
+                <ul>
+                  <li>Security code reviews as part of every pull request workflow</li>
+                  <li>Dependency scanning and automated alerts for known CVEs</li>
+                  <li>OWASP Top 10 addressed in our secure development lifecycle</li>
+                  <li>Content Security Policy (CSP), HSTS, and secure cookie attributes enforced</li>
+                  <li>Rate limiting and abuse detection on all public endpoints</li>
+                </ul>
+              </div>
+              <div class="security-pillar">
+                <h3>Access controls</h3>
+                <ul>
+                  <li>Multi-factor authentication (MFA) required for all team member access to production systems</li>
+                  <li>Role-based access control (RBAC) with principle of least privilege</li>
+                  <li>Access logs retained and reviewed for anomalies</li>
+                  <li>Offboarding procedures that revoke access within one hour of departure</li>
+                </ul>
+              </div>
+              <div class="security-pillar">
+                <h3>Compliance</h3>
+                <ul>
+                  <li>GDPR and Australian Privacy Act 1988 alignment</li>
+                  <li>COPPA and GDPR-K compliance for ChoreBuddies child-facing features</li>
+                  <li>Annual third-party penetration tests</li>
+                  <li>Regular internal security audits and risk assessments</li>
+                </ul>
+              </div>
+              <div class="security-pillar">
+                <h3>Incident response</h3>
+                <ul>
+                  <li>24/7 monitoring and alerting for security events</li>
+                  <li>Documented incident response runbooks</li>
+                  <li>Affected users notified within 72 hours of a confirmed breach where required by law</li>
+                  <li>Post-incident reviews published internally; material incidents summarised publicly</li>
+                </ul>
+              </div>
+            </div>
+
+            <h2>Responsible disclosure</h2>
+            <p>We welcome security researchers who discover potential vulnerabilities in our products and services. We ask that you follow responsible disclosure principles:</p>
+            <ul>
+              <li><strong>Do not</strong> access, modify, or delete data that is not yours.</li>
+              <li><strong>Do not</strong> perform denial-of-service attacks or disrupt production services.</li>
+              <li><strong>Do not</strong> publicly disclose the issue before we have had a reasonable opportunity to investigate and remediate it (we aim to acknowledge within 3 business days and resolve critical issues within 14 days).</li>
+              <li><strong>Do</strong> provide clear, reproducible steps so we can confirm the vulnerability.</li>
+            </ul>
+            <p>We commit to working with you in good faith, keeping you informed of our progress, and — where the report leads to a confirmed fix — crediting you (if you wish) in our acknowledgements.</p>
+
+            <h2>How to report a vulnerability</h2>
+            <p>Send vulnerability reports by email to:</p>
+            <p><strong><a href="mailto:security@temtedgroup.com">security@temtedgroup.com</a></strong></p>
+            <p>Please include:</p>
+            <ul>
+              <li>A description of the vulnerability and its potential impact;</li>
+              <li>The affected product, URL, or endpoint;</li>
+              <li>Step-by-step reproduction instructions;</li>
+              <li>Any proof-of-concept code or screenshots (do not include real user data).</li>
+            </ul>
+            <p>Please <strong>do not</strong> report security vulnerabilities through public GitHub issues, social media, or general support channels.</p>
+
+            <h2>Bug bounty</h2>
+            <p>We do not currently operate a formal bug bounty programme with financial rewards, but we do recognise researchers in our public acknowledgements list for responsibly disclosed, confirmed vulnerabilities.</p>
+
+            <h2>Contact</h2>
+            <address>
+              Security team: <a href="mailto:security@temtedgroup.com">security@temtedgroup.com</a><br>
+              General enquiries: <a href="mailto:hello@temtedgroup.com">hello@temtedgroup.com</a>
+            </address>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-partial="footer"></div>
+  <script src="./src/scripts/app.js"></script>
+</body>
+</html>
