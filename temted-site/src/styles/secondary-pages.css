@@ -1181,6 +1181,27 @@
   background-image: url('../../public/img/blog/3.png');
 }
 
+/* ---- PRODUCTS PAGE: logo thumbnails for CB, OL, Academy cards ---- */
+.product-grid .product-card__thumb {
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 24px;
+  overflow: hidden;
+}
+.product-grid .product-card__logo {
+  display: block;
+  max-width: 100%;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+.product-grid .product-card__thumb--cb { background: #F5F3FF; }
+.product-grid .product-card__thumb--ol { background: #F7F4FF; border-bottom: 1px solid rgba(155,111,232,.12); }
+.product-grid .product-card__thumb--ta { background: #EDF9F7; }
+
 /* ---- PRODUCTS: product card media (override glyph background) ---- */
 .product-card__media {
   background-size: cover !important;
